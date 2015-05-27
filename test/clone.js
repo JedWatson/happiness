@@ -19,11 +19,7 @@ var test = require('tape')
 var TMP = path.join(__dirname, '..', 'tmp')
 var HAPPINESS = path.join(__dirname, '..', 'bin', 'cmd.js')
 
-var URLS = [
-  'https://github.com/Flet/cursorfun.git',
-  'https://github.com/bnolan/scenevr.git',
-  'https://github.com/patrickarlt/acetate.git'
-]
+var URLS = []
 
 var MODULES = {}
 URLS.forEach(function (url) {
