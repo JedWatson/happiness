@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-var fs = require('fs')
 var defaults = require('defaults')
 var minimist = require('minimist')
 var stdin = require('get-stdin')

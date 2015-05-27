@@ -1,11 +1,11 @@
-var filePath = path.resolve('./bin/cmd.js')
 var path = require('path')
+var filePath = path.resolve('./bin/cmd.js')
 var happiness = require('../')
 var test = require('tape')
 
 test('api usage', function (t) {
   t.plan(6)
-  semistandard.lintFiles([], { cwd: 'bin' }, function (err, result) {
+  happiness.lintFiles([], { cwd: 'bin' }, function (err, result) {
     t.error(err, 'no error while linting')
     t.equal(typeof result, 'object', 'result is an object')
     t.equal(result.errorCount, 42, 'error count 42')
