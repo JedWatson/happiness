@@ -98,3 +98,8 @@ See [feross/standard] for more information.
 [downloads-image]: https://img.shields.io/npm/dm/happiness.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/happiness
 [feross/standard]: https://github.com/feross/standard
+
+
+### Credits
+
+Thanks to [Flet](https://github.com/Flet/) and his work on [semistandard](https://github.com/Flet/semistandard) for making this super easy to build on [standard](https://github.com/feross/standard).
