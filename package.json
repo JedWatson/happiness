@@ -11,6 +11,7 @@
   "dependencies": {
     "defaults": "^1.0.2",
     "eslint-config-happiness": "^0.1.0",
+    "eslint-config-standard": "^1.1.0",
     "get-stdin": "^4.0.1",
     "minimist": "^1.1.1",
     "standard-engine": "^1.4.3"
