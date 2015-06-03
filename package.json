@@ -1,7 +1,7 @@
 {
   "name": "happiness",
   "description": "Standard customized to make me happy",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "bin": {
     "happiness": "./bin/cmd.js"
   },
