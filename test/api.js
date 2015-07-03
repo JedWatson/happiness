@@ -13,7 +13,7 @@ test('api usage', function (t) {
     t.equal(result.results[0].filePath, filePath, 'error filepath correct')
 
     var errors = result.results[0].messages
-    t.equal(errors[0].message, 'Missing semicolon.', 'first mising semicolon message')
-    t.equal(errors[1].message, 'Missing semicolon.', 'second mising semicolon message')
+    t.equal(errors[0].message, 'Missing semicolon.', 'first missing semicolon message')
+    t.equal(errors[1].message, 'Missing semicolon.', 'second missing semicolon message')
   })
 })
