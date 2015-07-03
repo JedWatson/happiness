@@ -11,7 +11,6 @@
   "dependencies": {
     "defaults": "^1.0.0",
     "eslint": "^0.24.0",
-    "eslint-config-happiness": "^0.3.0",
     "eslint-config-standard": "^3.0.0",
     "eslint-config-standard-react": "1.0.0",
     "eslint-plugin-react": "^2.1.0",
@@ -20,15 +19,9 @@
     "standard-engine": "^1.8.0"
   },
   "devDependencies": {
-    "fixpack": "^2.2.0",
-    "merge": "^1.2.0",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.3.4",
-    "run-series": "^1.1.1",
     "standard": "*",
     "tap-spec": "^4.0.0",
-    "tape": "^4.0.0",
-    "xtend": "^4.0.0"
+    "tape": "^4.0.0"
   },
   "homepage": "https://github.com/JedWatson/happiness",
   "keywords": [
