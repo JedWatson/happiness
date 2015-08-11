@@ -22,7 +22,7 @@ Importantly:
 ## Badge
 
 Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
+let people know that your code is using the happiness style.
 
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
@@ -30,10 +30,10 @@ let people know that your code is using the standard style.
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 ```
 
-[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg?style=flat-square)]((https://github.com/JedWatson/happiness)
 
 ```markdown
-[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg?style=flat-square)]((https://github.com/JedWatson/happiness)
 ```
 
 ## Usage
