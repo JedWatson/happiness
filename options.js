@@ -9,6 +9,6 @@ module.exports = {
   bugs: pkg.bugs.url,
   tagline: 'Happiness',
   eslintConfig: {
-      configFile: path.join(__dirname, 'eslintrc.json')
+    configFile: path.join(__dirname, 'eslintrc.json')
   }
 }
