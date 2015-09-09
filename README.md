@@ -59,7 +59,7 @@ Error: Use JavaScript happiness Style
 ### Editor plugins
 
 - **Sublime users**: Try [SublimeLinter-contrib-happiness](https://github.com/JedWatson/SublimeLinter-contrib-happiness) for linting in your editor!
-- **Atom users** - Install [Linter](https://atom.io/packages/linter) and [linter-js-standard](https://atom.io/packages/linter-js-standard) (don't you mind with the misleading name it supports both styles).
+- **Atom users** - Install [linter-js-standard](https://atom.io/packages/linter-js-standard) (don't you mind with the misleading name it supports both styles).
 
 
 ### What you might do if you're clever
