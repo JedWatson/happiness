@@ -2,11 +2,11 @@ var path = require('path');
 var pkg = require('./package.json');
 
 module.exports = {
-	cmd: 'standard',
+	cmd: 'happiness',
 	version: pkg.version,
 	homepage: pkg.homepage,
 	bugs: pkg.bugs.url,
-	tagline: 'Use JavaScript Standard Style',
+	tagline: 'Use JavaScript Happiness Style',
 	eslintConfig: {
 		configFile: path.join(__dirname, 'rc', '.eslintrc')
 	},

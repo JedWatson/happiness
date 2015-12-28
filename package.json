@@ -1,17 +1,24 @@
 {
-  "name": "standard",
-  "description": "JavaScript Standard Style",
+  "name": "happiness",
+  "description": "JavaScript Happiness Style",
   "version": "5.4.1",
   "author": {
     "email": "feross@feross.org",
     "name": "Feross Aboukhadijeh",
     "url": "http://feross.org/"
   },
+  "contributors": [{
+    "name": "Jed Watson"
+  }, {
+    "name": "Daniel Cousens"
+  }, {
+    "name": "Wes Todd"
+  }],
   "bin": {
-    "standard": "./bin/cmd.js"
+    "happiness": "./bin/cmd.js"
   },
   "bugs": {
-    "url": "https://github.com/feross/standard/issues"
+    "url": "https://github.com/JedWatson/happiness/issues"
   },
   "dependencies": {
     "eslint-config-standard": "4.4.0",
@@ -31,6 +38,7 @@
   },
   "homepage": "http://standardjs.com",
   "keywords": [
+    "JavaScript Happiness Style",
     "JavaScript Standard Style",
     "check",
     "checker",
@@ -59,7 +67,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/standard.git"
+    "url": "git://github.com/JedWatson/happiness.git"
   },
   "scripts": {
     "test": "node ./bin/cmd.js && tape test/*.js",

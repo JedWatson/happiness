@@ -1,4 +1,4 @@
-# JavaScript Standard Style
+# JavaScript Happiness Style
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
@@ -9,6 +9,15 @@
 [npm-url]: https://npmjs.org/package/standard
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
+
+[Standard](https://github.com/feross/standard) customised to make [me](http://github.com/JedWatson/) happy.
+
+This is a fork of Standard with two changes:
+
+- Use tabs for indentions (like the coding gods intended)
+- Always use semicolons
+
+This readme is basically left untouched to make it easy to merge in new changes from Standard.  So anywhere you see `standard` just replace it with `happiness` and you should be good.
 
 ### One Style to Rule Them All
 
@@ -25,18 +34,17 @@ This module saves you (and others!) time in two ways:
 ## Install
 
 ```bash
-npm install standard
+npm install happiness
 ```
 
 ## Rules
 
-- **2 spaces** – for indentation
+- **Tabs** – for indentation
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
+- **Semicolons** – Because it makes your code eaiser to read
 - **Never start a line with `(` or `[`**
-  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-  - [More details][4]
+  - This was a hold-over from Standard, maybe not necessary
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
@@ -63,16 +71,16 @@ in JavaScript Standard Style, or check out some of
 Use this in one of your projects? Include one of these badges in your readme to
 let people know that your code is using the standard style.
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 ```markdown
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 ```
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg)](https://github.com/JedWatson/happiness)
 
 ```markdown
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg)](https://github.com/JedWatson/happiness)
 ```
 
 ## Usage
@@ -83,14 +91,14 @@ your terminal (flag `-g` installs `standard` globally on your system, omit it if
 to install in the current working directory):
 
 ```bash
-npm install standard -g
+npm install happiness -g
 ```
 
 After you've done that you should be able to use the `standard` program. The simplest use
 case would be checking the style of all JavaScript files in the current working directory:
 
 ```bash
-$ standard
+$ happiness
 Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
@@ -98,10 +106,10 @@ Error: Use JavaScript Standard Style
 You can optionally pass in a directory using the glob pattern:
 
 ```bash
-$ standard src/util/**/*.js
+$ happiness src/util/**/*.js
 ```
 
-**Note:** by default `standard` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
+**Note:** by default `happiness` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
 
 ### Text editor plugins
 
