@@ -3,12 +3,12 @@
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
 
-[travis-image]: https://travis-ci.org/feross/standard.svg?branch=master
-[travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
-[npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
-[downloads-url]: https://npmjs.org/package/standard
+[travis-image]: https://travis-ci.org/JedWatson/happiness.svg?branch=master
+[travis-url]: https://travis-ci.org/JedWatson/happiness
+[npm-image]: https://img.shields.io/npm/v/happiness.svg?style=flat
+[npm-url]: https://npmjs.org/package/happiness
+[downloads-image]: https://img.shields.io/npm/dm/happiness.svg?style=flat
+[downloads-url]: https://npmjs.org/package/happiness
 
 [Standard](https://github.com/feross/standard) customised to make [me](http://github.com/JedWatson/) happy.
 
