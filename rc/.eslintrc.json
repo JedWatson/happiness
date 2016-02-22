@@ -1,5 +1,4 @@
 {
-  "extends": ["standard", "standard-react"],
   "rules": {
     "indent": [2, "tab"],
     "jsx-quotes": [2, "prefer-double"],
