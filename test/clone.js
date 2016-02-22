@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 
 /**
  * Clones several projects that are known to follow "JavaScript Standard Style" and runs
