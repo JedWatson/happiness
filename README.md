@@ -63,7 +63,7 @@ npm install happiness
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
 in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard-packages/blob/master/standard.json) that use
+[the repositories](https://github.com/feross/standard-packages/blob/master/all.json) that use
 `standard`.
 
 ## Badge
@@ -132,7 +132,7 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 Install **[linter-js-standard][atom-1]**.
 
 For automatic formatting, install **[standard-formatter][atom-2]**.
-For snippets, install **[atom-standardjs-snippets][atom-3]**.
+For snippets, install **[standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -255,13 +255,9 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! Just run `standard --format filename.js`. This uses
-[Max Ogden][max]'s automatic formatter
-[`standard-format`][standard-format], which can automatically
-fix most code issues.
+Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`. 
 
-While most issues can be fixed, some, like not handling errors in node-style callbacks,
-must be fixed manually.
+ `standard-format filename.js` will automatically fix most issues though some, like not handling errors in node-style callbacks, must be fixed manually.
 
 [max]: https://github.com/maxogden
 [standard-format]: https://github.com/maxogden/standard-format
@@ -380,19 +376,27 @@ spend your time solving! :P
 
 ### What about Web Workers?
 
-Web workers have a magic global variable called `self`. In regular JS files, `standard`
-won't let you use `self` directly, as it wants to prevent accidental use of
-`window.self`. But `standard` has no way of knowing when you are in a `worker` and
-therefore does not know when to allow usage of `self` directly.
+Add this to the top of your files:
 
-Until we figure out a better solution, we recommend adding this to the top of workers:
-
-```
-/* global self */
+```js
+/* eslint-env serviceworker */
 ```
 
 This lets `standard` (as well as humans reading your code) know that `self` is a global
 in web worker code.
+
+### What about Mocha, Jasmine, QUnit, etc?
+
+To support mocha in your test files, add this to the beginning of your test files:
+
+```js
+/* eslint-env mocha */
+```
+
+Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a full list,
+check ESLint's [specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
+documentation. For a list of what globals are available for these environments, check
+the [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm module.
 
 ### Is there a Git `pre-commit` hook?
 
@@ -435,12 +439,11 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
 ### I want to contribute to `standard`. What packages should I know about?
 
 - **[standard](https://github.com/feross/standard)** - this repo
-  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
-  - **[eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)** - eslint rules for React and JSX
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
-  - **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
   - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
+  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
+  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
+  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
+- **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
