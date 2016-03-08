@@ -2,6 +2,8 @@
   "rules": {
     "indent": [2, "tab"],
     "jsx-quotes": [2, "prefer-double"],
+    "react/jsx-indent": [2, "tab"],
+    "react/jsx-indent-props": [2, "tab"],
     "no-extra-semi": 2,
     "semi": [2, "always"],
     "semi-spacing": [2, { "before": false, "after": true }]
