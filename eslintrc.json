@@ -1,0 +1,10 @@
+{
+  "extends": ["standard", "standard-jsx"],
+  "rules": {
+    "indent": [2, "tab"],
+    "jsx-quotes": [2, "prefer-double"],
+    "no-extra-semi": 2,
+    "semi": [2, "always"],
+    "semi-spacing": [2, { "before": false, "after": true }]
+  }
+}

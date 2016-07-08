@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.1.2 - 2016-06-03
+
+- Fix install errors for some users by updating eslint peer dependency
+
+## 7.1.1 - 2016-05-26
+
+- Add back full node 0.10, 0.12 support
+
+## 7.1.0 - 2016-05-16
+
+- Upgrade eslint to version ~2.10.2
+
+## 7.0.1 - 2016-05-04
+
+- Relax "no-duplicate-imports" rule to not include `export` so the following is allowed:
+
+```js
+import { foo } from 'bar'
+export * from 'bar'
+```
+
+## 7.0.0 - 2016-05-02
+
+### Changes
+
+- Upgrade eslint to version ~2.9.0
+- Remove "rules" configuration option (https://github.com/feross/standard/issues/367) from `package.json` (Reasoning is [here](https://github.com/feross/standard/issues/399#issuecomment-180961891))
+
+### New rules
+
+*Estimated % of affected standard users, based on test suite*
+
+- Require camelCase ([camelcase](http://eslint.org/docs/rules/camelcase)) [4%]
+- Disallow unnecessary escape usage ([no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)) [4% -- but, including many bugs]
+- Disallow duplicate imports ([no-duplicate-imports](http://eslint.org/docs/rules/no-duplicate-imports)) [0%]
+- Disallow unmodified conditions of loops ([no-unmodified-loop-condition](http://eslint.org/docs/2.0.0/rules/no-unmodified-loop-condition)) [0%]
+- Disallow whitespace before properties ([no-whitespace-before-property](http://eslint.org/docs/2.0.0/rules/no-whitespace-before-property)) [0%]
+- Disallow control flow statements in `finally` blocks ([no-unsafe-finally](http://eslint.org/docs/rules/no-unsafe-finally)) [0%]
+- Disallow unnecessary computed property keys on objects ([no-useless-computed-key](http://eslint.org/docs/rules/no-useless-computed-key)) [0%]
+- Validate spacing before closing bracket in JSX ([react/jsx-space-before-closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)) [0%]
+
+### Removed rules
+
+- Require parens in arrow function arguments ([arrow-parens](http://eslint.org/docs/rules/arrow-parens))
+
+## 6.0.8 - 2016-03-07
+
+- Pin eslint to version ~2.2.0
+- Update eslint-plugin-react to version 4.0.0
+
 ## 6.0.7 - 2016-02-18
 
 - Revert: Use install location of standard as eslint `cwd` (fixes [#429](https://github.com/feross/standard/issues/429))

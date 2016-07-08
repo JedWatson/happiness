@@ -1,25 +1,19 @@
-# JavaScript Happiness Style
-[![travis][travis-image]][travis-url]
-[![npm][npm-image]][npm-url]
-[![downloads][downloads-image]][downloads-url]
+<h1 align="center">
+  <br>
+  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard" width="200"></a>
+  <br>
+  JavaScript Standard Style
+  <br>
+  <br>
+</h1>
 
-[travis-image]: https://travis-ci.org/JedWatson/happiness.svg?branch=master
-[travis-url]: https://travis-ci.org/JedWatson/happiness
-[npm-image]: https://img.shields.io/npm/v/happiness.svg?style=flat
-[npm-url]: https://npmjs.org/package/happiness
-[downloads-image]: https://img.shields.io/npm/dm/happiness.svg?style=flat
-[downloads-url]: https://npmjs.org/package/happiness
+<h4 align="center">One Style to Rule Them All</h4>
 
-[Standard](https://github.com/feross/standard) customised to make [me](http://github.com/JedWatson/) happy.
-
-This is a fork of Standard with two changes:
-
-- Use tabs for indentions (like the coding gods intended)
-- Always use semicolons
-
-This readme is basically left untouched to make it easy to merge in new changes from Standard.  So anywhere you see `standard` just replace it with `happiness` and you should be good.
-
-### One Style to Rule Them All
+<p align="center">
+  <a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+</p>
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
@@ -103,10 +97,10 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-You can optionally pass in a directory using the glob pattern:
+You can optionally pass in a directory (or directories) using the glob pattern. Be sure to quote paths containing glob patterns so that they are expanded by standard instead of your shell:
 
 ```bash
-$ happiness src/util/**/*.js
+$ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
 **Note:** by default `happiness` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
@@ -146,10 +140,16 @@ Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
 let g:syntastic_javascript_checkers = ['standard']
 ```
 
-For automatic formatting on save, add these two lines to `.vimrc`:
+For automatic formatting on save, install [standard-format](https://github.com/maxogden/standard-format)
+
+```bash
+npm install -g standard-format
+```
+
+and add these two lines to `.vimrc`:
 
 ```vim
-autocmd bufwritepost *.js silent !standard % --format
+autocmd bufwritepost *.js silent !standard-format -w %
 set autoread
 ```
 
@@ -161,7 +161,7 @@ Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
 enable it in your projects.
 
 [emacs-1]: http://www.flycheck.org
-[emacs-2]: http://www.flycheck.org/manual/latest/index.html
+[emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 #### [Brackets](http://brackets.io/)
 
@@ -183,7 +183,7 @@ For automatic formatting, install **[vscode-standard-format][vscode-2]**.
 Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: docs/webstorm.md
+[webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
 
 ### What you might do if you're clever
 
@@ -255,7 +255,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`. 
+Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`.
 
  `standard-format filename.js` will automatically fix most issues though some, like not handling errors in node-style callbacks, must be fixed manually.
 
@@ -405,8 +405,8 @@ Funny you should ask!
 ```sh
 #!/bin/sh
 # Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.js$' | xargs standard
-exit $?
+git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
+if [ $? -ne 0 ]; then exit 1; fi
 ```
 
 Alternatively, [overcommit](https://github.com/brigade/overcommit) is a Git hook
@@ -434,7 +434,8 @@ And run:
 $ standard --verbose | snazzy
 ```
 
-There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json), and [standard-reporter](https://www.npmjs.com/package/standard-reporter)
+There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json),  [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
+[standard-summary](https://www.npmjs.com/package/standard-summary).
 
 ### I want to contribute to `standard`. What packages should I know about?
 
