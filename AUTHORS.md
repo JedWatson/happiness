@@ -50,7 +50,9 @@
 - Jakub Elżbieciak <jelz@post.pl>
 - Dale Jefferson <dale@dalejefferson.com>
 - Paul Kernfeld <paulkernfeld@gmail.com>
+- Wes Todd <wes@wesleytodd.com>
 - rajcoss <nagrajan@ciena.com>
+- Jed Watson <jed.watson@me.com>
 - Joe Whitfield-Seed <joeseed86@gmail.com>
 - botbotbot <tkroputa@gmail.com>
 - Žiga Vidic <zigomir@gmail.com>

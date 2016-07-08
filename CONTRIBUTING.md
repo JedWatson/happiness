@@ -17,20 +17,20 @@ are welcome:
 
 ## Code Style
 
-[![standard][standard-image]][standard-url]
+[![happiness][happiness-image]][happiness-url]
 
-This repository uses [`standard`][standard-url] to maintain code style and consistency,
-and to avoid style arguments. `npm test` runs `standard` automatically, so you don't have
+This repository uses [`happiness`][happiness-url] to maintain code style and consistency,
+and to avoid style arguments. `npm test` runs `happiness` automatically, so you don't have
 to!
 
-[standard-image]: https://cdn.rawgit.com/feross/standard/master/badge.svg
-[standard-url]: https://github.com/feross/standard
+[happiness-image]: https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg
+[happiness-url]: https://github.com/JedWatson/happiness
 
 ## Project Governance
 
 Individuals making significant and valuable contributions are given commit-access to the
 project to contribute as they see fit. This project is more like an open wiki than a
-standard guarded open source project.
+happiness guarded open source project.
 
 ### Rules
 

@@ -1,19 +1,26 @@
-<h1 align="center">
-  <br>
-  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard" width="200"></a>
-  <br>
-  JavaScript Standard Style
-  <br>
-  <br>
-</h1>
-
-<h4 align="center">One Style to Rule Them All</h4>
+<h4 align="center">One Style You Might Like</h4>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
-  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
-  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+  [![travis][travis-image]][travis-url]
+  [![npm][npm-image]][npm-url]
+  [![downloads][downloads-image]][downloads-url]
 </p>
+
+[travis-image]: https://travis-ci.org/JedWatson/happiness.svg?branch=master
+[travis-url]: https://travis-ci.org/JedWatson/happiness
+[npm-image]: https://img.shields.io/npm/v/happiness.svg?style=flat
+[npm-url]: https://npmjs.org/package/happiness
+[downloads-image]: https://img.shields.io/npm/dm/happiness.svg?style=flat
+[downloads-url]: https://npmjs.org/package/happiness
+
+[Standard](https://github.com/feross/standard) customised to make [me](http://github.com/JedWatson/) happy.
+
+This is a fork of Standard with two changes:
+
+- Use tabs for indentions (like the coding gods intended)
+- Always use semicolons
+
+This readme is basically left untouched to make it easy to merge in new changes from Standard.  So anywhere you see `standard` just replace it with `happiness` and you should be good.
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
