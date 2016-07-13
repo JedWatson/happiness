@@ -6,10 +6,11 @@
 config settings directory.
 4. Create a `Standard.xml` file:
 
-   ```xml
+```xml
   <code_scheme name="Standard">
     <JSCodeStyleSettings>
       <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
+      <option name="USE_DOUBLE_QUOTES" value="false" />
       <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
     </JSCodeStyleSettings>
     <XML>
@@ -28,11 +29,11 @@ config settings directory.
       </indentOptions>
     </codeStyleSettings>
   </code_scheme>
-  ```
+```
 
 5. If you don't want to clutter your project with extra dependencies and config files, then go global:
 
-   - `npm install -g eslint eslint-config-standard eslint-plugin-standard` (`sudo` might be required)
+   - `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise` (`sudo` might be required)
    - `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
 
 6. If you're OK with local dependencies and config, do (5) without `-g` and `~/`
@@ -41,5 +42,11 @@ config settings directory.
 9. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
 10. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`, only in rare cases you'll have to configure `ESLint package` path
 
+---
+
+If you're a Webstorm/PhpStorm users, [vote for `standard` to be one of the default styles][webstorm-3]
+built into the app.
+
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://www.jetbrains.com/webstorm/help/project-and-ide-settings.html
+[webstorm-2]: https://www.jetbrains.com/help/phpstorm/2016.1/directories-used-by-phpstorm-to-store-settings-caches-plugins-and-logs.html?origin=old_help#d66583e60
+[webstorm-3]: https://youtrack.jetbrains.com/issue/WEB-17331
