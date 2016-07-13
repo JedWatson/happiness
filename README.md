@@ -1,10 +1,8 @@
 <h4 align="center">One Style You Might Like</h4>
 
-<p align="center">
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
-</p>
 
 [travis-image]: https://travis-ci.org/JedWatson/happiness.svg?branch=master
 [travis-url]: https://travis-ci.org/JedWatson/happiness
