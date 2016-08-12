@@ -8,7 +8,7 @@ module.exports = {
 	eslint: eslint,
 	eslintConfig: {
 		configFile: path.join(__dirname, 'eslintrc.json'),
-		parser: "babel-eslint"
+		parser: 'babel-eslint'
 	},
 	formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g happiness-format"',
 	homepage: pkg.homepage,
