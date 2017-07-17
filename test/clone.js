@@ -1,5 +1,3 @@
-#! /usr/bin/env node
-
 /**
  * Clones several projects that are known to follow "JavaScript Standard Style" and runs
  * the `standard` style checker to verify that it passes without warnings. This helps
@@ -46,15 +44,10 @@ if (argv.disabled) {
   testPackages = disabledPackages
 } else {
   test('Disabled Packages', function (t) {
-    if (disabledPackages.length === 0) {
-      t.pass('no disabled packages')
-      t.end()
-    } else {
-      t.plan(disabledPackages.length)
-      disabledPackages.forEach(function (pkg) {
-        t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
-      })
-    }
+    disabledPackages.forEach(function (pkg) {
+      console.log('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
+    })
+    t.end()
   })
 }
 
@@ -68,7 +61,7 @@ test('test github repos that use `standard`', function (t) {
     var url = pkg.repo + '.git'
     var folder = path.join(TMP, name)
     return function (cb) {
-      access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
         if (argv.offline) {
           if (err) {
             t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
@@ -90,7 +83,7 @@ test('test github repos that use `standard`', function (t) {
         function gitClone (cb) {
           var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           spawn(GIT, args, { stdio: 'ignore' }, function (err) {
-            if (err) err.message += ' (' + name + ')'
+            if (err) err.message += ' (git clone) (' + name + ')'
             cb(err)
           })
         }
@@ -98,7 +91,7 @@ test('test github repos that use `standard`', function (t) {
         function gitPull (cb) {
           var args = [ 'pull' ]
           spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
-            if (err) err.message += ' (' + name + ')'
+            if (err) err.message += ' (git pull) (' + name + ')'
             cb(err)
           })
         }
@@ -129,18 +122,5 @@ function spawn (command, args, opts, cb) {
     cb(null)
   })
   return child
-}
-
-function access (path, mode, callback) {
-  if (typeof mode === 'function') {
-    return access(path, null, callback)
-  }
-
-  // Node v0.10 lacks `fs.access`, which is faster, so fallback to `fs.stat`
-  if (typeof fs.access === 'function') {
-    fs.access(path, mode, callback)
-  } else {
-    fs.stat(path, callback)
-  }
 }
 */

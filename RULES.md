@@ -1,6 +1,6 @@
-# JavaScript Happiness Style
+## JavaScript Happiness Style
 
-[![js-happiness-style](https://cdn.rawgit.com/KedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
+[![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 This is a TL;DR of the [happiness](https://github.com/JedWatson/happiness) JavaScript
 rules.

@@ -1,7 +1,7 @@
 {
   "name": "happiness",
   "description": "JavaScript Happiness Style",
-  "version": "7.1.2",
+  "version": "10.0.2",
   "author": {
     "email": "feross@feross.org",
     "name": "Feross Aboukhadijeh",
@@ -19,22 +19,28 @@
     "url": "https://github.com/JedWatson/happiness/issues"
   },
   "dependencies": {
-    "eslint": "~2.10.2",
-    "eslint-config-happiness": "5.3.1",
-    "eslint-config-happiness-jsx": "1.2.1",
-    "eslint-plugin-promise": "^1.0.8",
-    "eslint-plugin-react": "^5.0.1",
-    "eslint-plugin-standard": "^1.3.1",
-    "standard-engine": "^4.0.0"
+    "eslint": "~3.19.0",
+    "eslint-config-happiness": "10.2.1",
+    "eslint-config-happiness-jsx": "4.0.2",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-node": "~4.2.2",
+    "eslint-plugin-promise": "~3.5.0",
+    "eslint-plugin-react": "~6.10.0",
+    "eslint-plugin-standard": "~3.0.1",
+    "standard-engine": "~7.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.0",
-    "cross-spawn": "^4.0.0",
+    "babel-eslint": "^7.0.0",
+    "cross-spawn": "^5.0.1",
+    "eslint-index": "^1.3.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "run-parallel-limit": "^1.0.2",
-    "standard-packages": "^3.0.5",
-    "tape": "^4.4.0"
+    "run-parallel-limit": "^1.0.3",
+    "standard-packages": "^3.1.9",
+    "tape": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=4"
   },
   "homepage": "https://github.com/JedWatson/happiness",
   "keywords": [
@@ -72,11 +78,14 @@
     "url": "git://github.com/JedWatson/happiness.git"
   },
   "scripts": {
-    "update-authors": "./bin/update-authors.sh",
+    "show-rules": "eslint-index eslintrc.json",
+    "show-rules-disabled": "eslint-index eslintrc.json --status omitted off",
+    "show-summary": "eslint-index eslintrc.json --format table",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
     "test-offline-quick": "npm test -- --offline --quick",
-    "test-quick": "npm test -- --quick"
+    "test-quick": "npm test -- --quick",
+    "update-authors": "./bin/update-authors.sh"
   }
 }
