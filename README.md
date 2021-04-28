@@ -90,10 +90,6 @@ let people know that your code is using the standard style.
 [![js-happiness-style](https://img.shields.io/badge/code%20style-happiness-brightgreen.svg)](https://github.com/JedWatson/happiness)
 ```
 
-### Text editor plugins
-
-**Coming Soon**
-
 ## Maintainers
 
 - [Jed Watson](https://www.github.com/JedWatson)
